@@ -70,7 +70,7 @@ async def weather_city(message: Message, state: FSMContext) -> None:
             f'  • Влажность: <b>{weather_data["main"]["humidity"]}%</b>\n'
             f'  • Ветер: <b>{get_wind_direct(weather_data["wind"]["deg"])} '
             f'{weather_data["wind"]["speed"]} м/с</b>\n'
-            f'  • Атмосферное давление: <b>{weather_data["main"]["pressure"]} гПа</b>\n'
+            f'  • Атмосферное давление: <b>{int(weather_data["main"]["pressure"] * 0.75006)} мм. рт. ст.</b>\n'
             f'  • Видимость: <b>{weather_data["visibility"]} м</b>'
         )
         await message.answer(answer, parse_mode='HTML')
