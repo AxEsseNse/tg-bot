@@ -40,7 +40,7 @@ async def photo_form_photo(message: Message, state: FSMContext, bot: Bot):
         with Image.open(temp_filepath) as img:
             width, height = img.size
 
-        os.remove(temp_filepath)
+        os.remove(temp_dir)
         await state.clear()
         await message.answer('Разрешение изображения: {width} x {height}'.format(width=width, height=height))
     else:
