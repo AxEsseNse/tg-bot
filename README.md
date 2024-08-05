@@ -36,10 +36,22 @@ Portfolio Public tg bot
     source venv/bin/activate  # для Unix
     ```
 
-6. Установите зависимости:
+6. Перейдите в проект:
+
+    ```sh
+    cd tg_bot
+    ```
+
+7. Установите зависимости:
 
     ```sh
     pip install -r requirements.txt
+    ```
+
+8. Пропишите PYTHONPATH:
+
+    ```sh
+    $env:PYTHONPATH += ";$PWD"
     ```
 
 ## Запуск
